@@ -5,6 +5,8 @@
         "complex": "cpp",
         "ostream": "cpp",
         "iterator": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "iomanip": "cpp",
+        "ios": "cpp"
     }
 }

@@ -37,6 +37,7 @@ double surfaceArea(double radius);
     // cout << "Enter radius: ";
     // cin >> radius;
 
+    // calling for area function 
     areaOfCircle = area(radius);
     cout << "The area of a circle is " << areaOfCircle << endl;
 
