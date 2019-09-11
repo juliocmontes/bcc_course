@@ -14,7 +14,7 @@ using namespace std;
 
 int main()
 {
-    double DOLLAR = 1.0;
+    float DOLLAR = 1.0;
     double QUARTER = 0.25;
     double DIME = 0.10;
     double NICKEL = 0.05;
@@ -43,13 +43,37 @@ int main()
     }
 
     totalChange = fabs(amountDue - amountReceived); // returns absolute value for change
-    cout << "Total Change: $" << totalChange << endl;
+    cout << fixed << setprecision(2) << "Total Change: $" << totalChange << endl;
 
-    dollarsNeeded = totalChange / DOLLAR;
-    quartersNeeded = totalChange / QUARTER;
-    dimesNeeded = totalChange / DIME;
-    nickelsNeeded = totalChange / NICKEL;
-    penniesNeeded = totalChange / PENNY;
+    while (totalChange > DOLLAR)
+    {
+        dollarsNeeded = totalChange / DOLLAR;
+        totalChange -= dollarsNeeded;
+        {
+            quartersNeeded = totalChange / QUARTER;
+            totalChange -= quartersNeeded;
+        }
+        if (totalChange < QUARTER)
+        {
+            dimesNeeded = totalChange / DIME;
+            totalChange -= dimesNeeded;
+        }
+        if (totalChange < DIME)
+        {
+            nickelsNeeded = totalChange / NICKEL;
+            totalChange -= nickelsNeeded;
+        }
+        if (totalChange < NICKEL)
+        {
+            penniesNeeded = totalChange / PENNY;
+        }
+    }
+
+    // dollarsNeeded = totalChange / DOLLAR;
+    // quartersNeeded = totalChange / QUARTER;
+    // dimesNeeded = totalChange / DIME;
+    // nickelsNeeded = totalChange / NICKEL;
+    // penniesNeeded = totalChange / PENNY;
 
     cout << "Dollars: " << dollarsNeeded << endl;
     cout << "Quarters: " << quartersNeeded << endl;
