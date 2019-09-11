@@ -45,41 +45,25 @@ int main()
     totalChange = fabs(amountDue - amountReceived); // returns absolute value for change
     cout << fixed << setprecision(2) << "Total Change: $" << totalChange << endl;
 
-    while (totalChange > DOLLAR)
-    {
-        dollarsNeeded = totalChange / DOLLAR;
-        totalChange -= dollarsNeeded;
-        {
-            quartersNeeded = totalChange / QUARTER;
-            totalChange -= quartersNeeded;
-        }
-        if (totalChange < QUARTER)
-        {
-            dimesNeeded = totalChange / DIME;
-            totalChange -= dimesNeeded;
-        }
-        if (totalChange < DIME)
-        {
-            nickelsNeeded = totalChange / NICKEL;
-            totalChange -= nickelsNeeded;
-        }
-        if (totalChange < NICKEL)
-        {
-            penniesNeeded = totalChange / PENNY;
-        }
-    }
+    dollarsNeeded = floor(totalChange / DOLLAR);
+    totalChange -= dollarsNeeded;
 
-    // dollarsNeeded = totalChange / DOLLAR;
-    // quartersNeeded = totalChange / QUARTER;
-    // dimesNeeded = totalChange / DIME;
-    // nickelsNeeded = totalChange / NICKEL;
-    // penniesNeeded = totalChange / PENNY;
+    quartersNeeded = floor(totalChange / QUARTER);
+    totalChange -= quartersNeeded * .25;
 
-    cout << "Dollars: " << dollarsNeeded << endl;
-    cout << "Quarters: " << quartersNeeded << endl;
-    cout << "Dimes : " << dimesNeeded << endl;
-    cout << "Nickels : " << nickelsNeeded << endl;
-    cout << "Pennies: " << penniesNeeded << endl;
+    dimesNeeded = floor(totalChange / DIME);
+    totalChange -= dimesNeeded * .10;
+
+    nickelsNeeded = floor(totalChange / NICKEL);
+    totalChange -= nickelsNeeded * .05;
+
+    penniesNeeded = totalChange / PENNY;
+
+    cout << fixed << setprecision(0) << "Dollars: " << dollarsNeeded << endl;
+    cout << fixed << setprecision(0) << "Quarters: " << quartersNeeded << endl;
+    cout << fixed << setprecision(0) << "Dimes : " << dimesNeeded << endl;
+    cout << fixed << setprecision(0) << "Nickels : " << nickelsNeeded << endl;
+    cout << fixed << setprecision(0) << "Pennies: " << penniesNeeded << endl;
 
     return 0;
 }
