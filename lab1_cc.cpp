@@ -14,19 +14,19 @@ using namespace std;
 
 int main()
 {
-    float DOLLAR = 1.0;
+    double DOLLAR = 1.0;
     double QUARTER = 0.25;
     double DIME = 0.10;
     double NICKEL = 0.05;
     double PENNY = 0.01;
     double amountDue,   //total due
         amountReceived, //amount received
-        totalChange,    // total minus amount given
-        dollarsNeeded,
-        dimesNeeded,
-        nickelsNeeded,
-        penniesNeeded,
-        quartersNeeded;
+        totalChange,    //total minus amount given
+        dollarsNeeded,  //dollars needed in change
+        dimesNeeded,    //dimes needed in change
+        nickelsNeeded,  //nickels needed in change
+        penniesNeeded,  //pennies needed in change
+        quartersNeeded; //quarters needed in change
 
     cout << "Enter total amount due: $";
     cin >> amountDue;
