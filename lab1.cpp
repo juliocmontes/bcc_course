@@ -13,7 +13,7 @@ double circumference(double radius);
 double volume(double radius);
 double surfaceArea(double radius);
 
-    int main()
+int main()
 {
     // local variables
     short x1, x2, y1, y2, distanceBetweenCoordinates;
@@ -37,7 +37,7 @@ double surfaceArea(double radius);
     // cout << "Enter radius: ";
     // cin >> radius;
 
-    // calling for area function 
+    // calling for area function
     areaOfCircle = area(radius);
     cout << "The area of a circle is " << areaOfCircle << endl;
 
@@ -72,7 +72,6 @@ short distance(short x1, short x2, short y1, short y2)
     return result;
 }
 
-
 // function to find area
 double area(double radius)
 {
@@ -103,18 +102,20 @@ double circumference(double radius)
     return result;
 }
 
-double volume(double radius) {
+double volume(double radius)
+{
     const double PI = 3.14;
     double result;
 
-    result = ((4.0/3) * PI * pow(radius,3));
+    result = ((4.0 / 3) * PI * pow(radius, 3));
     return result;
 }
 
-double surfaceArea(double radius) {
+double surfaceArea(double radius)
+{
     const double PI = 3.14;
     double result;
-    
-    result = 4.0 * PI * pow((radius),2);
+
+    result = 4.0 * PI * pow((radius), 2);
     return result;
 }
