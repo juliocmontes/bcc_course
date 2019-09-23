@@ -1,3 +1,15 @@
+/*
+
+Title: Multiplying by Addition
+Author: Julio M.
+Date: 09.22.19
+
+Description: 
+Multiplication by addition
+Write a program that executes the multiplication of two numbers entered by the user using only the addition operation.
+For example, if the user enters 3 and 4, the program computes the multiplication of these numbers by adding the number 4 three times (i.e., 3 * 4 = 4 + 4 + 4)
+ */
+
 #include <iostream>
 
 using namespace std;
@@ -21,3 +33,4 @@ int main()
     cout << "Multiplication of " << multiplier << " & " << number << " is " << result << endl;
 
     return 0;
+}

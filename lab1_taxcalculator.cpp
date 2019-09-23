@@ -1,5 +1,3 @@
-// Tax Calculator
-
 /* Tax Calculator
 Write a program to prompt for the income, then calculate and display the initial amount, the amount after deductions, and the deducted amount. Use good programming practices. 
 Display messages so that the results are understandable.
