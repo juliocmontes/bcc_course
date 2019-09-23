@@ -25,6 +25,7 @@ double circumference(double radius);
 double volume(double radius);
 double surfaceArea(double radius);
 double changeCalculator(double amountDue, double amountReceived);
+void drawNameTag();
 
 
 int main()
@@ -43,8 +44,9 @@ int main()
     bool displayNametag;
     char needTag;
 
-// nametag function
-    displayNametag = needNameTag('y');
+    // nametag function
+    // displayNametag = needNameTag('y');
+    drawNameTag();
 
     //calling functions
     cout << endl;
@@ -128,6 +130,18 @@ bool needNameTag(char needTag)
         default: cout << "Until Next Time!\n";
     }
     return 0;
+}
+
+void drawNameTag(){
+    cout << "###########################################################################\n";
+    cout << "###\t\t\t    ANNUAL CONFERENCE    \t\t\t###\n";
+    cout << "###########################################################################\n";
+    cout << "### Name: \t\t\t\t\t\t\t\t###\n";
+    cout << "###        \t\t\t\t\t\t\t\t###\n";
+    cout << "###########################################################################\n";
+    cout << "### Organization: \t\t\t\t\t\t\t###\n";
+    cout << "###        \t\t\t\t\t\t\t\t###\n";
+    cout << "###########################################################################\n";
 }
 
 // Distance between two points
