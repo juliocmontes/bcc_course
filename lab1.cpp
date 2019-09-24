@@ -384,7 +384,7 @@ int multiplyByAdding(int number, int multiplier)
 
     cout << "Multiplication of " << multiplier << " & " << number << " is " << result << endl;
 
-    return 0;
+    return result;
 }
 
 // calculator that will calculate exact change
