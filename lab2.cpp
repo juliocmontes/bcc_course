@@ -30,7 +30,7 @@ return 0;
 // Star Diagram function
 void starDiagram(int rows, char var) 
 {
-    int reverse, exponent = 0;
+    int exponent = 0;
     for (int i = 0; i < rows; i++ )
     {
         exponent = pow(2, i);
