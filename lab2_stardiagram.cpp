@@ -32,7 +32,6 @@ int main() {
     {
         exponent/=2;
         cout << string(exponent, var) << endl;
-
     }
     return 0;
 }
