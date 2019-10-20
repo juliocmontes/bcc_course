@@ -8,6 +8,7 @@
         "iosfwd": "cpp",
         "iomanip": "cpp",
         "ios": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "stdexcept": "cpp"
     }
 }
